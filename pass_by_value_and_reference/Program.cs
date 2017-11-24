@@ -18,7 +18,19 @@ namespace pass_by_value_and_reference
         }
         static void Main(string[] args)
         {
+            int a = 2;
+            int[] b = { 1, 2, 3 };
+            MethodDemo obj = new MethodDemo();
 
+            Console.WriteLine("a before = {0}", a);
+            obj.PassByValue(a);
+            Console.WriteLine("a after = {0}", a);
+
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("b[0] before = {0}", b[0]);
+            obj.PassByReference(b);
+            Console.WriteLine("b[0] after = {0}", b[0]);
         }
     }
 }
